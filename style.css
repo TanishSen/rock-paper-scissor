@@ -1,0 +1,133 @@
+@font-face {
+  font-family: "MyCustomFont"; /* Name the font */
+  src: url("fonts/myfont.otf") format("otf"); /* Add different formats for compatibility */
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #fce4ec; /* Light pink background for a softer look */
+  /*font-family: "Cute Font", cursive;  Playful font choice */
+  font-family: "MyCustomFont", sans-serif; /* Fallback to sans-serif if custom font doesn't load */
+}
+
+/*body {
+  font-family: "MyCustomFont", sans-serif;  Fallback to sans-serif if custom font doesn't load 
+}*/
+
+h1 {
+  background-color: #ffb6c1; /* Soft pink to match the theme */
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.choice {
+  height: 215px;
+  width: 215px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Adds a soft shadow for depth */
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.choice:hover {
+  cursor: pointer;
+  background-color: #ffd1dc; /* Light pink hover effect */
+  transform: scale(1.05); /* Slight zoom-in effect */
+}
+
+img {
+  height: 180px;
+  width: 180px;
+  border-radius: 50%;
+  border: 3px solid #ffb6c1; /* Pink border to match the theme */
+  object-fit: cover;
+}
+
+.choices {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10rem;
+  gap: 5rem;
+}
+
+.Score-Board {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  font-size: 2rem;
+  margin-top: 5rem;
+  color: #ff4081; /* Pink color for the score text */
+}
+
+#user-score,
+#comp-score {
+  font-size: 3rem;
+  color: #ff4081; /* Pink color for scores */
+}
+
+#msg {
+  background: #ff8a80; /* Softer pink for message background */
+  color: #fff;
+  display: inline-block;
+  font-size: 2rem;
+  border-radius: 1.5rem;
+  padding: 0.5rem 2rem;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Adds depth */
+  font-family: "Cute Font", cursive;
+}
+
+.message-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+/* Additional Cat-Themed Elements */
+.choice:hover::after {
+  /*content: "🐾"; Adds a paw emoji on hover */
+  font-size: 2rem;
+  position: absolute;
+  margin-top: -20px;
+  color: #ff4081;
+}
+
+.Score-Board div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.Score-Board div::before {
+  /*content: "🐱";  Add cat emoji beside score */
+  font-size: 1.5rem;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ff4081;
+}
+
+#msg::before {
+  content: "😺 "; /* Adds a playful cat face before the message */
+}
+
+#msg.win::before {
+  content: "🎉 "; /* Celebration icon for win */
+}
+
+#msg.lose::before {
+  content: "😿 "; /* Sad cat icon for lose */
+}

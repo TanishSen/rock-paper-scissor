@@ -24,12 +24,12 @@ const drawGame = () => {
 const showWinner = (userWin) => {
   if (userWin) {
     console.log("Win");
-    msg.innerHTML = "You Win";
+    msg.innerHTML = "🎉 You Win 🎉";
     userScr.innerHTML++;
     winSound.play();
   } else {
     console.log("Lose");
-    msg.innerHTML = "Cat Win";
+    msg.innerHTML = "😿 Cat Win 😿";
     compScr.innerHTML++;
     loseSound.play();
   }
